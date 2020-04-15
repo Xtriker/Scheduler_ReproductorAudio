@@ -36,6 +36,7 @@
  * Definitions
  ******************************************************************************/
 
+extern void BOARD_InitBootPins(void);
 /*! @brief Direction type  */
 typedef enum _pin_mux_direction
 {
@@ -48,6 +49,24 @@ typedef enum _pin_mux_direction
  * @addtogroup pin_mux
  * @{
  */
+
+/*! @name PORTE0
+  @{ */
+#define BOARD_INITPINS_FGPIOD 		FGPIOD /*!<@brief FGPIO device name: FGPIOE */
+#define BOARD_INITPINS_GPIOD 		GPIOD /*!<@brief GPIO device name: GPIOE */
+#define BOARD_INITPINS_PORTD 		PORTD /*!<@brief PORT device name: PORTE */
+#define BOARD_INITPINS_INPUT0_PIN 	0U     /*!<@brief PORTB pin index: 0 */
+#define BOARD_INITPINS_INPUT2_PIN 	2U
+#define BOARD_INITPINS_INPUT3_PIN 	3U /* @} */
+
+/*! @name PORTB (number 43), J10[2]/A0 */
+#define BOARD_INITPINS_FGPIOB 		FGPIOB /*!<@brief FGPIO device name: FGPIOB */
+#define BOARD_INITPINS_GPIOB 		GPIOB  /*!<@brief GPIO device name: GPIOB */
+#define BOARD_INITPINS_PORTB 		PORTB  /*!<@brief PORT device name: PORTB */
+#define BOARD_INITPINS_BIT0_PIN 	0U     /*!<@brief PORTB pin index: 0 */
+#define BOARD_INITPINS_BIT1_PIN 	1U                                       /* @} */
+#define BOARD_INITPINS_BIT2_PIN 	2U
+#define BOARD_INITPINS_BIT3_PIN 	3U
 
 /*******************************************************************************
  * API
@@ -62,12 +81,6 @@ extern "C" {
  *
  */
 void BOARD_InitPins(void);
-
-/*!
- * @brief Calls initialization functions.
- *
- */
-void BOARD_InitBootPins(void);
 
 #if defined(__cplusplus)
 }

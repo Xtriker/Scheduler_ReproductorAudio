@@ -43,10 +43,10 @@ enum
 	TOGGLING
 };
 
-T_UBYTE re_LEDaction = TOGGLING;
+T_UBYTE re_LEDaction = ON;
 
 void delay_time(int);
-void init_leds();
+void init_leds(void);
 void red_on();
 void red_off();
 void green_on();

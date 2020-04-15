@@ -10,7 +10,6 @@
 #ifndef RGB_LEDS_H                       /* To avoid double inclusion */
 #define RGB_LEDS_H
 
-
 extern void init_leds(void);
 extern void app_rgb_led(void);
 extern void app_rgb_led_fsm(void);

@@ -28,7 +28,6 @@
 #include "periodic_tasks_init.h"
 #include "periodic_tasks_modules.h"
 
-
 /**************************************************************
  *  Name                 : periodic_tasks_init_MclDrvs
  *  Description          : Initialize needed microcontroller drivers (pheripherals) before start application
@@ -50,7 +49,7 @@ void periodic_tasks_init_MclDrvs(void)
  **************************************************************/
 void periodic_tasks_init_SysDrvs(void)
 {
-	init_leds();
+
 }
 
 /**************************************************************
@@ -141,6 +140,6 @@ void periodic_tasks_init_SysDrvs(void)
  **************************************************************/
  void periodic_tasks_init_task_1Mtks(void)
  {
- 
+
  }
  

@@ -31,7 +31,10 @@
 /*============================================================================*/
 //#include "MyApplication.h"
 //#include "MyLowLayerDriver.h"
-#include "RGB_LEDs.h"
+//#include "RGB_LEDs.h"
+#include "../Applications/app_RotabitCounter.h"
+#include "../Applications/app_TrackIndicator.h"
+#include "../Applications/app_Debounce.h"
 /*============================================================================*/
 
 #endif
