@@ -111,7 +111,7 @@
  **************************************************************/
  void periodic_tasks_exec_500tks(void)
  {
-	 if(rub_PausePlay == TRUE)
+	 if((rub_PausePlay == TRUE) && (lub_ButtonState[lub_i] == 0) && (rub_LongPress == FALSE))
 	 {
 		 app_FOWARD();
 		 rub_StopRotabit = TRUE;

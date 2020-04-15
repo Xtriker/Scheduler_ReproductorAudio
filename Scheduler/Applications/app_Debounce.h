@@ -16,6 +16,9 @@
 extern unsigned char lub_ButtonState[NUMBERS_BUTTON];
 extern T_UBYTE rub_PausePlay;
 extern T_UBYTE rub_StopRotabit;
+extern T_UBYTE lub_o[NUMBERS_BUTTON];
+extern T_UBYTE lub_i;
+extern T_UBYTE rub_LongPress;
 extern void app_DebounceTask(void);
 extern void app_DebounceValues(void);
 extern void app_DebounceCondition(void);
