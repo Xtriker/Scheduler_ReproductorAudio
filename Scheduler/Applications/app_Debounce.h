@@ -31,4 +31,15 @@ enum{
 	LONGPRESS
 };
 
+enum{
+	BACK,
+	NEXT,
+	PAUSE
+};
+
+enum{
+	REWIND,
+	FOWARD,
+	STOP
+};
 #endif /* APP_DEBOUNCE_H_ */
