@@ -55,7 +55,7 @@
  **************************************************************/
  void periodic_tasks_exec_10tks(void)
  {
-
+	 app_DebounceStages();
  }
  
  /**************************************************************
@@ -69,7 +69,7 @@
  **************************************************************/
  void periodic_tasks_exec_20tks(void)
  {
-
+	 app_ADC_Task();
  }
  
  /**************************************************************
@@ -83,7 +83,8 @@
  **************************************************************/
  void periodic_tasks_exec_50tks(void)
  {
-	 app_DebounceStages();
+	 app_PWMProcentValue();
+	 app_PWM_Value();
  }
  
  /**************************************************************
@@ -111,7 +112,7 @@
  **************************************************************/
  void periodic_tasks_exec_500tks(void)
  {
-	 if((rub_PausePlay == TRUE) && (lub_ButtonState[lub_i] == 0) && (rub_LongPress == FALSE))
+	 if((rub_PausePlay == TRUE) && (rub_LongPress == FALSE))
 	 {
 		 app_FOWARD();
 		 rub_StopRotabit = TRUE;

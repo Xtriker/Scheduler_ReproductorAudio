@@ -71,7 +71,7 @@ void app_DebounceValues(void)
 		{
 			lub_i = lub_i + 1;
 			/* Boton no presionado */
-			rub_States[lub_i] = NOTPRESS;
+//			rub_States[lub_i] = NOTPRESS;
 		}
 	}
 
@@ -123,41 +123,41 @@ void app_DebounceStages(void)
 				switch (rub_ButtonsStates[lub_i])
 				{
 					case BACK: {
-//						if((rub_PausePlay == TRUE) && (rub_LongPress == FALSE))
-//						{
+						if((rub_PausePlay == TRUE) && (rub_LongPress == TRUE))
+						{
 							lub_o[lub_i] = 0u;
 							app_BACK();
 							rub_States[lub_i] = NOTPRESS;
-//						}
+						}
 					}
 						break;
 					case NEXT: {
-//						if((rub_PausePlay == TRUE) && (rub_LongPress == FALSE))
-//						{
+						if((rub_PausePlay == TRUE) && (rub_LongPress == TRUE))
+						{
 							lub_o[lub_i] = 0u;
 							app_NEXT();
 							rub_States[lub_i] = NOTPRESS;
-//						}
+						}
 					}
 						break;
 					case PAUSE:
 					{
-						lub_o[lub_i] = 0u;
-						if (rub_StopRotabit == FALSE)
-						{
-							lub_o[1] = 0u;
-							lub_o[0] = 0u;
-							lub_o[2] = 0u;
-							rub_PausePlay = TRUE;
-							rub_States[lub_i] = NOTPRESS;
-						}
-						else if (rub_PausePlay == TRUE)
-						{
-							rub_PausePlay = FALSE;
-							rub_StopRotabit = FALSE;
 							lub_o[lub_i] = 0u;
-							rub_States[lub_i] = NOTPRESS;
-						}
+							if (rub_StopRotabit == FALSE)
+							{
+								lub_o[1] = 0u;
+								lub_o[0] = 0u;
+								lub_o[2] = 0u;
+								rub_PausePlay = TRUE;
+								rub_States[lub_i] = NOTPRESS;
+							}
+							else if (rub_PausePlay == TRUE)
+							{
+								rub_PausePlay = FALSE;
+								rub_StopRotabit = FALSE;
+								lub_o[lub_i] = 0u;
+								rub_States[lub_i] = NOTPRESS;
+							}
 					}
 					break;
 				}
@@ -167,22 +167,23 @@ void app_DebounceStages(void)
 			switch (rub_ButtonsStates[lub_i])
 			{
 				case FOWARD: {
-//				if ((rub_PausePlay == TRUE) && (rub_LongPress == FALSE))
-//					{
+				if (rub_PausePlay == TRUE)
+					{
 						app_FOWARD();
 						lub_o[lub_i] = 0u;
+						rub_LongPress = FALSE;
 						rub_States[lub_i] = NOTPRESS;
-//					}
+					}
 				}
 				break;
 				case REWIND: {
-//					if (rub_PausePlay == TRUE)
-//					{
+					if (rub_PausePlay == TRUE)
+					{
 						app_REWIND();
 						rub_LongPress = FALSE;
 						lub_o[lub_i] = 0u;
 						rub_States[lub_i] = NOTPRESS;
-//					}
+					}
 				}
 				break;
 				case STOP: {
@@ -196,13 +197,13 @@ void app_DebounceStages(void)
 				}break;
 				default:
 				{
-				GPIOB->PDOR = 0u;
-				app_TrackIndicatorOutput(0u);
-				lub_o[1] = 0u;
-				lub_o[0] = 0u;
-				lub_o[2] = 0u;
-				rub_PausePlay = FALSE;
-				rub_States[lub_i] = NOTPRESS;
+//				GPIOB->PDOR = 0u;
+//				app_TrackIndicatorOutput(0u);
+//				lub_o[1] = 0u;
+//				lub_o[0] = 0u;
+//				lub_o[2] = 0u;
+//				rub_PausePlay = FALSE;
+//				rub_States[lub_i] = NOTPRESS;
 				}
 			}
 		}

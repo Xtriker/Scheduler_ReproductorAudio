@@ -35,6 +35,7 @@
 #include "../Applications/app_RotabitCounter.h"
 #include "../Applications/app_TrackIndicator.h"
 #include "../Applications/app_Debounce.h"
+#include "../board/peripherals.h"
 /*============================================================================*/
 
 #endif

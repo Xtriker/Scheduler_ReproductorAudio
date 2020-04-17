@@ -31,15 +31,29 @@ enum{
 	LONGPRESS
 };
 
-enum{
-	BACK,
-	NEXT,
-	PAUSE
-};
+/* | BACK	|	0	|
+ * | NEXT	|	1	|
+ * | PLAY	|	2	|
+ */
+//enum{
+//	BACK,
+//	NEXT,
+//	PAUSE
+//};
 
 enum{
-	REWIND,
+	BACK,
+	PAUSE,
+	NEXT
+};
+//enum{
+//	REWIND,
+//	FOWARD,
+//	STOP
+//};
+enum{
+	STOP,
 	FOWARD,
-	STOP
+	REWIND
 };
 #endif /* APP_DEBOUNCE_H_ */

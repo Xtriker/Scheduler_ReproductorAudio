@@ -71,14 +71,13 @@ T_UBYTE lub_PWMPorcentValue = 0;
 static void app_ADC_Trigger(void);
 static T_UBYTE app_ADC_IsConversionCompleted(void);
 static T_UWORD app_ADC_GetValue(void);
-void app_PIT_Init(void);
+
 void app_ADC_Init(void);
 void app_PWM_Init(void);
 static void app_ADC_Trigger(void);
 T_UBYTE app_PWMProcentValue(void);
 
 void BOARD_InitBootPeripherals(void) {
-	app_PIT_Init();
 	app_ADC_Init();
 	app_ADC_Trigger();
 
