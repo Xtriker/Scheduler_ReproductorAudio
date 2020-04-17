@@ -39,11 +39,10 @@ void app_DebounceValues(void)
 		{
 			lub_o[lub_i] = lub_o[lub_i] + 1;
 		}
-		if((lub_o[lub_i] > 200) && (lub_ButtonState[lub_i] == 0))
+		if((lub_o[lub_i] > 200))
 		{
 			rub_Button[lub_i] = 0u;
 			lub_i = lub_i + 1;
-			rub_LongPress = TRUE;
 		}
 		if((lub_o[lub_i] > 20) && (lub_o[lub_i] < 200) && (lub_ButtonState[lub_i] == 1))
 		{
@@ -89,14 +88,14 @@ void app_DebounceStages(void)
 			if(rub_States[lub_i] == NOTPRESS)
 			{
 				/* Not Used */
-				rub_LongPress = FALSE;
+
 			}
 			if(rub_States[lub_i] == PRESS)
 			{
 				switch (rub_ButtonsStates[lub_i])
 				{
 					case 0: {
-						if((rub_PausePlay == TRUE) && (rub_LongPress == FALSE))
+						if((rub_PausePlay == FALSE) && (rub_LongPress == FALSE))
 						{
 							lub_o[lub_i] = 0u;
 							app_BACK();
@@ -140,22 +139,22 @@ void app_DebounceStages(void)
 			switch (rub_ButtonsStates[lub_i])
 			{
 				case 0: {
-				if ((rub_PausePlay == TRUE) && (rub_LongPress = TRUE))
+				if (rub_PausePlay == TRUE)
 					{
 						app_FOWARD();
 						rub_LongPress = FALSE;
-//						rub_States[lub_i] = NOTPRESS;
 						lub_o[lub_i] = 0u;
+						rub_States[lub_i] = NOTPRESS;
 					}
 				}
 				break;
 				case 1: {
-					if ((rub_PausePlay == TRUE) && (rub_LongPress = TRUE))
+					if (rub_PausePlay == TRUE)
 					{
 						app_REWIND();
 						rub_LongPress = FALSE;
-//						rub_States[lub_i] = NOTPRESS;
 						lub_o[lub_i] = 0u;
+						rub_States[lub_i] = NOTPRESS;
 					}
 				}
 				break;
