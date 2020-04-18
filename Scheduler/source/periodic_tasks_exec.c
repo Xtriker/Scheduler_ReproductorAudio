@@ -119,6 +119,7 @@
 		 app_FOWARD();
 		 rub_StopRotabit = TRUE;
 	 }
+	 app_DebounceStages();
  }
  
  /**************************************************************
@@ -133,6 +134,6 @@
  void periodic_tasks_exec_1Mtks(void)
  {
 //	 app_TwoStates_Task();
-	 app_DebounceStages();
+
  }
  
