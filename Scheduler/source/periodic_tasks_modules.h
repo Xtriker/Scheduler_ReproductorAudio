@@ -36,6 +36,7 @@
 #include "../Applications/app_TrackIndicator.h"
 #include "../Applications/app_Debounce.h"
 #include "../board/peripherals.h"
+#include "../Applications/app_TwoStates.h"
 /*============================================================================*/
 
 #endif

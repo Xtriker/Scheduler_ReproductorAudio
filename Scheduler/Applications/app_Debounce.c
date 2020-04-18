@@ -9,7 +9,7 @@
 
 
 /* Variables globales */
-T_UBYTE rub_Timer = 0u;
+
 
 /* Banderas */
 
@@ -177,7 +177,7 @@ void app_DebounceStages(void)
 							app_FOWARD();
 							lub_o[lub_i] = 0u;
 							rub_LongPress = FALSE;
-							rub_States[lub_i] = NOTPRESS;
+//							rub_States[lub_i] = NOTPRESS;
 						}
 					}
 					break;
@@ -187,7 +187,7 @@ void app_DebounceStages(void)
 							app_REWIND();
 							lub_o[lub_i] = 0u;
 							rub_LongPress = FALSE;
-							rub_States[lub_i] = NOTPRESS;
+//							rub_States[lub_i] = NOTPRESS;
 						}
 					}
 					break;

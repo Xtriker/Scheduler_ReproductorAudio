@@ -42,6 +42,8 @@
  {
 	 app_ReadInputValue();
 	 app_DebounceTask();
+//	 app_TwoStates();
+
  }
  
  /**************************************************************
@@ -55,7 +57,7 @@
  **************************************************************/
  void periodic_tasks_exec_10tks(void)
  {
-	 app_DebounceStages();
+
  }
  
  /**************************************************************
@@ -130,6 +132,7 @@
  **************************************************************/
  void periodic_tasks_exec_1Mtks(void)
  {
-
+//	 app_TwoStates_Task();
+	 app_DebounceStages();
  }
  

@@ -11,6 +11,7 @@
 #include "app_ReadInput.h"
 #include "app_RotabitCounter.h"
 #include "app_TrackIndicator.h"
+#include "../drivers/fsl_gpio.h"
 #include <stdio.h>
 
 extern unsigned char lub_ButtonState[NUMBERS_BUTTON];
