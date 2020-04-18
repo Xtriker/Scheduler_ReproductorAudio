@@ -25,12 +25,13 @@ extern void app_DebounceCondition(void);
 extern void app_DebounceSelecction(void);
 extern void app_DebounceStages(void);
 
-enum{
+enum {
 	NOTPRESS,
 	PRESS,
 	LONGPRESS
 };
 
+//S_Button_Options ButtonOptions= NOTPRESS;
 /* | BACK	|	0	|
  * | NEXT	|	1	|
  * | PLAY	|	2	|
@@ -46,14 +47,16 @@ enum{
 	PAUSE,
 	NEXT
 };
+
 //enum{
 //	REWIND,
 //	FOWARD,
 //	STOP
 //};
 enum{
-	STOP,
 	FOWARD,
+	STOP,
 	REWIND
 };
+
 #endif /* APP_DEBOUNCE_H_ */
