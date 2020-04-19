@@ -111,7 +111,7 @@ void app_DebounceSelecction(void)
 		}
 }
 
-void app_DebounceStages(void)
+void app_DebounceStages_NormalPress(void)
 {
 	lub_i = 0;
 	while(lub_i < 3)
@@ -127,7 +127,7 @@ void app_DebounceStages(void)
 					case BACK: {
 						if((rub_PausePlay == TRUE) && (rub_LongPress == FALSE))
 						{
-							lub_o[lub_i] = 0u;
+//							lub_o[lub_i] = 0u;
 							app_BACK();
 							rub_States[lub_i] = NOTPRESS;
 						}
@@ -139,7 +139,7 @@ void app_DebounceStages(void)
 						 */
 						if((rub_PausePlay == TRUE) && (rub_LongPress == FALSE))
 						{
-							lub_o[lub_i] = 0u;
+//							lub_o[lub_i] = 0u;
 							app_NEXT();
 							rub_States[lub_i] = NOTPRESS;
 						}
@@ -147,12 +147,12 @@ void app_DebounceStages(void)
 						break;
 					case PAUSE:
 					{
-							lub_o[lub_i] = 0u;
+//							lub_o[lub_i] = 0u;
 							if (rub_StopRotabit == FALSE)
 							{
-								lub_o[1] = 0u;
-								lub_o[0] = 0u;
-								lub_o[2] = 0u;
+//								lub_o[1] = 0u;
+//								lub_o[0] = 0u;
+//								lub_o[2] = 0u;
 								rub_PausePlay = TRUE;
 								rub_States[lub_i] = NOTPRESS;
 							}
@@ -160,53 +160,62 @@ void app_DebounceStages(void)
 							{
 								rub_PausePlay = FALSE;
 								rub_StopRotabit = FALSE;
-								lub_o[lub_i] = 0u;
+//								lub_o[lub_i] = 0u;
 								rub_States[lub_i] = NOTPRESS;
 							}
 					}
 					break;
 				}
 			}
-			if (rub_States[lub_i] == LONGPRESS)
-			{
-				switch (rub_ButtonsStates[lub_i])
-				{
-					case FOWARD: {
-					if (rub_PausePlay == TRUE)
-						{
-							app_FOWARD();
-							lub_o[lub_i] = 0u;
-							rub_LongPress = FALSE;
-//							rub_States[lub_i] = NOTPRESS;
-						}
-					}
-					break;
-					case REWIND: {
-						if (rub_PausePlay == TRUE)
-						{
-							app_REWIND();
-							lub_o[lub_i] = 0u;
-							rub_LongPress = FALSE;
-//							rub_States[lub_i] = NOTPRESS;
-						}
-					}
-					break;
-					case STOP: {
-						GPIOB->PDOR = 0u;
-						app_TrackIndicatorOutput(0u);
-						lub_o[1] = 0u;
-						lub_o[0] = 0u;
-						lub_o[2] = 0u;
-						rub_PausePlay = FALSE;
-						rub_States[lub_i] = NOTPRESS;
-					}break;
-					default:
-					{
-
-					}
-				}
-			}
 		lub_i = lub_i + 1;
+	}
+}
+
+void app_DebounceStages_LongPress(void)
+{
+	lub_i = 0;
+	while(lub_i < 3)
+	{
+		if (rub_States[lub_i] == LONGPRESS)
+					{
+						switch (rub_ButtonsStates[lub_i])
+						{
+							case FOWARD: {
+							if (rub_PausePlay == TRUE)
+								{
+										periodic_tasks_init_task_100tks();
+		//								app_FOWARD();
+		//								lub_o[lub_i] = 0u;
+		//								rub_LongPress = FALSE;
+		//								rub_States[lub_i] = NOTPRESS;
+								}
+							}
+							break;
+							case REWIND: {
+								if (rub_PausePlay == TRUE)
+								{
+									app_REWIND();
+		//							lub_o[lub_i] = 0u;
+									rub_LongPress = FALSE;
+		//							rub_States[lub_i] = NOTPRESS;
+								}
+							}
+							break;
+							case STOP: {
+								GPIOB->PDOR = 0u;
+								app_TrackIndicatorOutput(0u);
+								lub_o[1] = 0u;
+								lub_o[0] = 0u;
+								lub_o[2] = 0u;
+								rub_PausePlay = FALSE;
+								rub_States[lub_i] = NOTPRESS;
+							}break;
+							default:
+							{
+
+							}
+						}
+					}
 	}
 }
 

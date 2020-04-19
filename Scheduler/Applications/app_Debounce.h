@@ -12,6 +12,7 @@
 #include "app_RotabitCounter.h"
 #include "app_TrackIndicator.h"
 #include "../drivers/fsl_gpio.h"
+#include "../source/periodic_tasks_init.h"
 #include <stdio.h>
 
 extern unsigned char lub_ButtonState[NUMBERS_BUTTON];
@@ -24,7 +25,8 @@ extern void app_DebounceTask(void);
 extern void app_DebounceValues(void);
 extern void app_DebounceCondition(void);
 extern void app_DebounceSelecction(void);
-extern void app_DebounceStages(void);
+extern void app_DebounceStages_NormalPress(void);
+extern void app_DebounceStages_LongPress(void);
 
 enum {
 	NOTPRESS,

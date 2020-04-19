@@ -99,8 +99,8 @@
  *  Critical/explanation : no
  **************************************************************/
  void periodic_tasks_exec_100tks(void)
- { 
-
+ {
+	 app_DebounceStages_LongPress();
  }
  
  /**************************************************************
@@ -119,7 +119,7 @@
 		 app_FOWARD();
 		 rub_StopRotabit = TRUE;
 	 }
-	 app_DebounceStages();
+	 app_DebounceStages_NormalPress();
  }
  
  /**************************************************************

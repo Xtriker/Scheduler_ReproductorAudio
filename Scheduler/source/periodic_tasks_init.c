@@ -114,7 +114,10 @@ void periodic_tasks_init_SysDrvs(void)
  **************************************************************/
  void periodic_tasks_init_task_100tks(void)
  {
-
+		app_FOWARD();
+//								lub_o[lub_i] = 0u;
+		rub_LongPress = FALSE;
+//								rub_States[lub_i] = NOTPRESS;
  }
  
  /**************************************************************
