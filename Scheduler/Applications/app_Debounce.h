@@ -39,11 +39,6 @@ enum {
  * | NEXT	|	1	|
  * | PLAY	|	2	|
  */
-//enum{
-//	BACK,
-//	NEXT,
-//	PAUSE
-//};
 
 enum{
 	BACK,
@@ -51,11 +46,6 @@ enum{
 	NEXT
 };
 
-//enum{
-//	REWIND,
-//	FOWARD,
-//	STOP
-//};
 enum{
 	FOWARD,
 	STOP,
