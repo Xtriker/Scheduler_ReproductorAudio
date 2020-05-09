@@ -37,7 +37,7 @@
  **************************************************************/
 void periodic_tasks_init_MclDrvs(void)
 {
-	
+	app_PWM_Init();
 }
 
 /**************************************************************
@@ -52,57 +52,6 @@ void periodic_tasks_init_SysDrvs(void)
 
 }
 
-/**************************************************************
- *  Name                 : periodic_tasks_init_task_5tks
- *  Description          : Container for initialization of functionality that is
-                           executed periodically
- *  Parameters           : none
- *  Return               : none
- *  Critical/explanation : no
- **************************************************************/
- void periodic_tasks_init_task_5tks(void)
- {
-
- }
- 
- /**************************************************************
- *  Name                 : periodic_tasks_init_task_10tks
- *  Description          : Container for initialization of functionality that is
-                           executed periodically
- *  Parameters           : none
- *  Return               : none
- *  Critical/explanation : no
- **************************************************************/
- void periodic_tasks_init_task_10tks(void)
- {
-
- }
- 
- /**************************************************************
- *  Name                 : periodic_tasks_init_task_20tks
- *  Description          : Container for initialization of functionality that is
-                           executed periodically
- *  Parameters           : none
- *  Return               : none
- *  Critical/explanation : no
- **************************************************************/
- void periodic_tasks_init_task_20tks(void)
- {
-
- }
- 
- /**************************************************************
- *  Name                 : periodic_tasks_init_task_50tks
- *  Description          : Container for initialization of functionality that is
-                           executed periodically
- *  Parameters           : none
- *  Return               : none
- *  Critical/explanation : no
- **************************************************************/
- void periodic_tasks_init_task_50tks(void)
- {
-	
- }
  
  /**************************************************************
  *  Name                 : periodic_tasks_init_task_100tks
@@ -115,34 +64,5 @@ void periodic_tasks_init_SysDrvs(void)
  void periodic_tasks_init_task_100tks(void)
  {
 		app_FOWARD();
-//								lub_o[lub_i] = 0u;
 		rub_LongPress = FALSE;
-//								rub_States[lub_i] = NOTPRESS;
  }
- 
- /**************************************************************
- *  Name                 : periodic_tasks_init_task_500tks
- *  Description          : Container for initialization of functionality that is
-                           executed periodically
- *  Parameters           : none
- *  Return               : none
- *  Critical/explanation : no
- **************************************************************/
- void periodic_tasks_init_task_500tks(void)
- {
-
- }
- 
- /**************************************************************
- *  Name                 : periodic_tasks_init_task_1Mtks
- *  Description          : Container for initialization of functionality that is
-                           executed periodically
- *  Parameters           : none
- *  Return               : none
- *  Critical/explanation : no
- **************************************************************/
- void periodic_tasks_init_task_1Mtks(void)
- {
-
- }
- 

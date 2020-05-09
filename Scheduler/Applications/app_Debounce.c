@@ -219,7 +219,16 @@ void app_DebounceStages_LongPress(void)
 			}
 			else
 			{
-//				rub_States[lub_i] = NOTPRESS;
+				/* Nothing to do */
 			}
 }
 
+void app_FowardRewind(void)
+	 {
+	 if((rub_PausePlay == TRUE) && (rub_LongPress == FALSE))
+	 {
+		 app_FOWARD();
+		 rub_StopRotabit = TRUE;
+	 }
+	 app_DebounceStages_NormalPress();
+	 }

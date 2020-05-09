@@ -27,6 +27,7 @@ extern void app_DebounceCondition(void);
 extern void app_DebounceSelecction(void);
 extern void app_DebounceStages_NormalPress(void);
 extern void app_DebounceStages_LongPress(void);
+extern void app_FowardRewind(void);
 
 enum {
 	NOTPRESS,

@@ -9,7 +9,7 @@
 * date_created:    July 31 2013 
 *=============================================================================*/
 /* DESCRIPTION : Header of the configuartion file of the                      */
-/* "Grandpa´s Clock Scheduler" core                                           */
+/* "Grandpaï¿½s Clock Scheduler" core                                           */
 /*============================================================================*/
 /* FUNCTION COMMENT : Header of the configurationfor the scheduler            */
 /*                                                                            */
@@ -51,7 +51,6 @@ typedef enum {
     TASK_50TKS,
     TASK_100TKS,
     TASK_500TKS,
-    TASK_1MTKS,
     /* Number of Managers/Applications */
     SCHD_MANAGERS_NUMBER
 } E_MODULES_ID_TYPE;

@@ -42,7 +42,6 @@
  {
 	 app_ReadInputValue();
 	 app_DebounceTask();
-//	 app_TwoStates();
 
  }
  
@@ -114,26 +113,7 @@
  **************************************************************/
  void periodic_tasks_exec_500tks(void)
  {
-	 if((rub_PausePlay == TRUE) && (rub_LongPress == FALSE))
-	 {
-		 app_FOWARD();
-		 rub_StopRotabit = TRUE;
-	 }
-	 app_DebounceStages_NormalPress();
+	 app_FowardRewind();
  }
  
- /**************************************************************
- *  Name                 : periodic_tasks_exec_1Mtks
- *	ID					 : TASK_1MTKS
- *  Description          : Container for functionality that is 
-                           executed periodically.
- *  Parameters           : none
- *  Return               : none
- *  Critical/explanation : no
- **************************************************************/
- void periodic_tasks_exec_1Mtks(void)
- {
-//	 app_TwoStates_Task();
-
- }
  
